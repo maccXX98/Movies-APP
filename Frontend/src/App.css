@@ -1,0 +1,36 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    /* 70% para el carrusel y 30% para el aside */
+    gap: 1rem;
+    /* Espacio entre carrusel y aside */
+    padding: 1rem;
+}
+
+.carousel-container {
+    grid-column: 1;
+    /* Carrusel en la primera columna */
+}
+
+.aside-container {
+    grid-column: 2;
+    /* Aside en la segunda columna */
+}
+
+.slick-dots li button:before {
+    font-size: 12px;
+    color: #ccc;
+    /* Color de los puntos inactivos */
+}
+
+.slick-dots li.slick-active button:before {
+    color: #0072ff;
+    /* Color de los puntos activos */
+    font-size: 14px;
+    /* Tamaño de los puntos activos */
+}

@@ -1,0 +1,223 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h3 {
+    font-weight: bold;
+    color: #444;
+}
+
+/* Layout */
+.layout {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "content side"
+        "footer footer";
+    grid-template-columns: 3fr 1fr;
+    /* Sidebar a la derecha */
+    grid-template-rows: auto 50px 1fr auto;
+    min-height: 100vh;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    grid-area: header;
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.header h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffcc00;
+}
+
+/* Navigation */
+.nav {
+    grid-area: nav;
+    background-color: #eee;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    background-color: #ddd;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.nav a:hover {
+    background-color: #444;
+    color: #fff;
+}
+
+/* Carrusel Container */
+.carousel-container {
+    grid-area: content;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    /* Oculta las tarjetas que no están visibles */
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    /* Transición suave entre tarjetas */
+    width: calc(250px * 4);
+    /* Ancho ajustado para 4 tarjetas */
+}
+
+.movie-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    min-width: 250px;
+    /* Ancho mínimo de cada tarjeta */
+    margin-right: 20px;
+}
+
+.movie-item:hover {
+    transform: translateY(-5px);
+    /* Efecto de elevación al pasar el ratón */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.movie-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.movie-item .title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.movie-item .description {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.movie-item button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-right: 10px;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.movie-item button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+/* Flechas del carrusel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+}
+
+.carousel-btn.left {
+    left: 0;
+}
+
+.carousel-btn.right {
+    right: 0;
+}
+
+.carousel-btn:hover {
+    background-color: #333;
+}
+
+/* Sidebar */
+.side {
+    grid-area: side;
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.search, .add {
+    margin-bottom: 30px;
+}
+
+.search input[type="text"],
+.add input[type="text"],
+.add textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.add input[type="submit"],
+.search button {
+    padding: 10px;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.add input[type="submit"]:hover,
+.search button:hover {
+    background-color: #333;
+}
+
+/* Footer */
+footer {
+    grid-area: footer;
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>La Gran Pantalla</title>
+  </head>
+  <body>
+    <div class="layout">
+      <header class="header">
+        <h1>La Gran Pantalla</h1>
+      </header>
+
+      <nav class="nav">
+        <ul>
+          <li>
+            <a href="#">Inicio</a>
+            <a href="#">Peliculas</a>
+            <a href="#">Blog</a>
+            <a href="#">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="carousel-container">
+        <button class="carousel-btn left" id="prevBtn">&#9664;</button>
+        <!-- Flecha izquierda -->
+        <div class="carousel" id="carousel">
+          <article class="movie-item">
+            <img src="ruta_de_la_imagen1.jpg" alt="Pelicula 1" />
+            <h3 class="title">Pelicula 1</h3>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit mollitia, dolores incidunt, eos odio nobis
+              omnis cum, assumenda corrupti eveniet a? Voluptate, temporibus? Architecto vero commodi amet illo magni
+              at!
+            </p>
+            <button class="edit">Editar</button>
+            <button class="delete">Borrar</button>
+          </article>
+          <article class="movie-item">
+            <img src="ruta_de_la_imagen2.jpg" alt="Pelicula 2" />
+            <h3 class="title">Pelicula 2</h3>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sequi, consectetur vitae voluptatum
+              fugit dolores fuga asperiores fugiat molestias? Libero voluptatum doloribus velit ipsum omnis at dolore
+              repellat id non.
+            </p>
+            <button class="edit">Editar</button>
+            <button class="delete">Borrar</button>
+          </article>
+          <article class="movie-item">
+            <img src="ruta_de_la_imagen2.jpg" alt="Pelicula 2" />
+            <h3 class="title">Pelicula 3</h3>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, sint! Ducimus ut earum mollitia laborum
+              necessitatibus animi delectus. Quos eos a eum quam temporibus nesciunt architecto, modi dolorem
+              consectetur sunt.
+            </p>
+            <button class="edit">Editar</button>
+            <button class="delete">Borrar</button>
+          </article>
+          <article class="movie-item">
+            <img src="ruta_de_la_imagen2.jpg" alt="Pelicula 2" />
+            <h3 class="title">Pelicula 4</h3>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, rem nisi voluptatum ipsa ipsam tempore!
+              Eaque fuga, aliquam unde, voluptas, tempora rem repellat iste corporis expedita illum ullam numquam vitae?
+            </p>
+            <button class="edit">Editar</button>
+            <button class="delete">Borrar</button>
+          </article>
+          <article class="movie-item">
+            <img src="ruta_de_la_imagen2.jpg" alt="Pelicula 2" />
+            <h3 class="title">Pelicula 5</h3>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sapiente aliquam atque minima quo
+              voluptatem consequuntur explicabo fugiat, officia dolores possimus. Praesentium atque ut molestias nobis
+              expedita corrupti libero maiores!
+            </p>
+            <button class="edit">Editar</button>
+            <button class="delete">Borrar</button>
+          </article>
+          <article class="movie-item">
+            <img src="ruta_de_la_imagen2.jpg" alt="Pelicula 2" />
+            <h3 class="title">Pelicula 6</h3>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores fugit, a iure magni ea sed aperiam
+              quam id, illum fuga laboriosam, adipisci rem inventore tempora! Aut consequuntur quod in consequatur!
+            </p>
+            <button class="edit">Editar</button>
+            <button class="delete">Borrar</button>
+          </article>
+        </div>
+        <button class="carousel-btn right" id="nextBtn">&#9654;</button>
+        <!-- Flecha derecha -->
+      </section>
+
+      <aside class="side">
+        <div class="search">
+          <h3 class="title">Buscador</h3>
+          <form>
+            <input type="text" />
+            <button>Buscar</button>
+          </form>
+        </div>
+
+        <div class="add">
+          <h3 class="title">Añadir pelicula</h3>
+          <form>
+            <input type="text" placeholder="Titulo" />
+            <textarea placeholder="Descripcion"></textarea>
+            <input type="submit" value="Guardar" />
+          </form>
+        </div>
+      </aside>
+
+      <footer>
+        &copy; La Gran Pantalla
+        <br />
+        Todos los derechos reservados
+      </footer>
+    </div>
+
+    <script src="js/carrusel.js"></script>
+  </body>
+</html>
